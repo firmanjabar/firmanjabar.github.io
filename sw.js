@@ -19,8 +19,8 @@ workbox.precaching.precacheAndRoute([{
         revision: '1'
     },
     {
-        url: '/css/style.css',
-        revision: '1'
+        url: '/css/styles.css',
+        revision: '2'
     },
     {
         url: '/js/materialize.min.js',
