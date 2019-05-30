@@ -12,6 +12,10 @@
   <script type="text/javascript" src="/js/materialize.min.js"></script>
   <link rel="manifest" href="/manifest.json">
   <link rel="shortcut icon" type="image/png" href="img/icons/icon-512x512.png" />
+  <!-- ios support -->
+  <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+  <meta name="apple-mobile-web-app-status-bar" content="#b2dfdb">
+  <meta name="theme-color" content="#b2dfdb">
 </head>
 
 <body class="grey lighten-4">
@@ -40,12 +44,9 @@
     </li>
   </ul>
 
-  <!-- recipes -->
+  <!-- carousel -->
   <div class="container">
     <div class="carousel carousel-slider center">
-      <!-- <div class="carousel-fixed-item center">
-        <a class="btn waves-effect white grey-text darken-text-2">button</a>
-      </div> -->
       <div class="carousel-item white-text">
         <img src="img/carousel2.png" class="crsl">
       </div>
@@ -57,6 +58,12 @@
         <img src="img/carousel3.jpg" class="crsl">
       </div>
     </div>
+  </div>
+
+  <div class="container grey-text center content">
+    <a href="/pages/materi.html">
+      <button class="btn btn-large teal">GET STARTED</button>
+    </a>
   </div>
 
   <script src="/js/ui.js"></script>
