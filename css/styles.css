@@ -92,48 +92,49 @@ nav .sidenav-trigger {
   margin: 0;
 }
 
-/* recipe styles */
+/* content styles */
 .content {
   margin-top: 20px;
 }
 
-.card-panel.recipe {
+.card-panel.content {
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0px 1px 3px rgba(90, 90, 90, 0.1);
   display: grid;
-  grid-template-columns: 2fr 6fr 1fr;
+  grid-template-columns: 0.3fr 9fr 0fr;
   grid-template-areas: "image details delete";
   position: relative;
 }
 
-.recipe img {
+.content img {
   grid-area: image;
   max-width: 60px;
 }
 
-.recipe-details {
+.content-details {
   grid-area: details;
   margin-top: 6px;
 }
 
-.recipe-delete {
+.content-delete {
   grid-area: delete;
   position: absolute;
   bottom: 0px;
   right: 0px;
 }
 
-.recipe-delete i {
+.content-delete i {
   font-size: 18px;
 }
 
-.recipe-title {
+.content-title {
   font-weight: bold;
 }
 
-.recipe-ingredients {
+.content-materi {
   font-size: 0.8em;
+  margin-top: 6px;
 }
 
 /* form-styles */
