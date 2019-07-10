@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Content - HTML Warrior</title>
+    <!-- materialize icons, css & js -->
+    <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" href="/css/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" type="image/png" href="../img/icons/icon-512x512.png" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#b2dfdb">
+    <meta name="theme-color" content="#b2dfdb">
+    <!-- markdown -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea'
+        });
+    </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body class="grey lighten-4">
+
+    <!-- top nav -->
+    <nav class="z-depth-0">
+        <div class="nav-wrapper container">
+            <a href="/">HTML<span>Warrior</span></a>
+            <span class="btn-flat right grey-text text-darken-1">
+                <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+            </span>
+        </div>
+    </nav>
+
+    <!-- side nav -->
+    <ul id="side-menu" class="sidenav side-menu">
+        <li><a class="subheader">HTML WARRIOR</a></li>
+        <li><a href="/" class="waves-effect">Home</a></li>
+        <li><a href="/pages/about.html" class="waves-effect">About</a></li>
+        <li><a href="/pages/contact.html" class="waves-effect">Contact</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a href="/pages/login.html" class="waves-effect">
+                <i class="material-icons">exit_to_app</i>Login</a>
+        </li>
+        <li><a href="/pages/addMateri.html" class="waves-effect">
+                <i class="material-icons">add_box</i>Add Content</a>
+        </li>
+    </ul>
+
+    <!-- content -->
+    <div class="contents content container grey-text text-darken-1">
+    </div>
+
+    <div class="center">
+        <a class="btn-floating btn-small btn-large add-btn modal-trigger" href="#modal">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal bottom-sheet">
+        <div class="modal-content">
+            <form class="add-content container section">
+                <h6>New Content</h6>
+                <div class="divider"></div>
+                <div class="input-field">
+                    <input placeholder="e.g. Materi 1 - List" id="title" type="text" class="validate">
+                    <label for="title">Content Title</label>
+                </div>
+                <div class="input-field">
+                    <span class="grey-text">Content Detail</span>
+                    <br><br>
+                    <textarea id="detail" type="text" class="markdown-editor validate"></textarea>
+                    <!-- <textarea id="detail" type="text" rows="10" cols="80"></textarea> -->
+                </div>
+                <div class="input-field center">
+                    <button class="modal-close waves-effect btn-small">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAhH6H_n7hIhx50Hunw4Z95rSp-8sPY9VE",
+            authDomain: "htmlwarrior-pwa.firebaseapp.com",
+            databaseURL: "https://htmlwarrior-pwa.firebaseio.com",
+            projectId: "htmlwarrior-pwa",
+            storageBucket: "htmlwarrior-pwa.appspot.com",
+            messagingSenderId: "795937381898",
+            appId: "1:795937381898:web:c36993716240d762"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+    <script>
+        const simplemde = new SimpleMDE({
+            element: document.querySelector(".markdown-editor"),
+            toolbar: ["bold", "italic", "heading", "strikethrough", "|", "quote", "unordered-list",
+                "ordered-list", "|", "link",
+                "image", "table", "|", "preview", "side-by-side", "fullscreen",
+                "|", "guide"
+            ],
+        });
+    </script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/db.js"></script>
+    <!-- <script src="/ckeditor/ckeditor.js">
+        CKEDITOR.replace('detail');
+    </script> -->
+
+</body>
+
+</html>

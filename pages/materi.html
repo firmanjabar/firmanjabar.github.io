@@ -42,6 +42,9 @@
     <li><a href="/pages/login.html" class="waves-effect">
         <i class="material-icons">exit_to_app</i>Login</a>
     </li>
+    <li><a href="/pages/addMateri.html" class="waves-effect">
+        <i class="material-icons">add_box</i>Add Content</a>
+    </li>
   </ul>
 
   <!-- content -->
@@ -49,7 +52,7 @@
     <div class="card-panel content white row">
       <div class="content-details">
         <div class="content-title">Latihan - Membuat Akun Azure</div>
-        <div class="content-materi">Untuk menggunakan layanan Azure, kita perlu punya akun Azure. Akun ini sifatnya
+        <div class="content-detail">Untuk menggunakan layanan Azure, kita perlu punya akun Azure. Akun ini sifatnya
           gratis sampai nanti kita merubah tipe akun menjadi pay-as-you-go. Untuk mendaftar dibutuhkan kartu kredit yang
           valid, namun ini hanya digunakan untuk validasi identitas dan usia saja. Kartu kredit kita tak akan dikenai
           tagihan sampai nanti kita memutuskan untuk upgrade dari mulanya akun percobaan menjadi full subscription.
@@ -58,7 +61,7 @@
     </div>
   </div>
 
-  <div class="center content">
+  <div class="center" style="margin-top: 20px;">
     <div class="row">
       <div class="col s1 m3"></div>
       <div class="col s4 m2">
@@ -81,27 +84,37 @@
     </div>
   </div>
 
-  <!-- add content side nav -->
+  <!-- render modul -->
   <div id="side-form" class="sidenav side-form">
-    <form class="add-content container section">
-      <h6>New content</h6>
+    <div class="modul add-content container section">
+      <a class="subheader">MODUL</a>
       <div class="divider"></div>
-      <div class="input-field">
-        <input placeholder="e.g. Ninja soup" id="title" type="text" class="validate">
-        <label for="title">content Title</label>
-      </div>
-      <div class="input-field">
-        <input placeholder="e.g. Tofu, mushroom, garlic" id="materi" type="text" class="validate">
-        <label for="materi">materi</label>
-      </div>
-      <div class="input-field center">
-        <button class="btn-small">Add</button>
-      </div>
-    </form>
+
+    </div>
   </div>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAhH6H_n7hIhx50Hunw4Z95rSp-8sPY9VE",
+      authDomain: "htmlwarrior-pwa.firebaseapp.com",
+      databaseURL: "https://htmlwarrior-pwa.firebaseio.com",
+      projectId: "htmlwarrior-pwa",
+      storageBucket: "htmlwarrior-pwa.appspot.com",
+      messagingSenderId: "795937381898",
+      appId: "1:795937381898:web:c36993716240d762"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
   <script src="/js/ui.js"></script>
   <script src="/js/app.js"></script>
+  <script src="/js/dbModul.js"></script>
+
 </body>
 
 </html>
