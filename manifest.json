@@ -1,0 +1,21 @@
+{
+    "name": "IVVIIXVII",
+    "short_name": "IVVIIXVII",
+    "description": "Web Static",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#b2dfdb",
+    "theme_color": "#b2dfdb",
+    "icons": [
+        {
+            "src": "img/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }
+    ]
+}
