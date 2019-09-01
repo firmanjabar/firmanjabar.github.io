@@ -48,19 +48,25 @@
   <!-- Intro Page Start -->
   <section id="intro">
     <div class="top-right-gradient"></div>
-    <div class="wrapper">
-      <div class="intro-left">
-        <h1>IVVIIXVII - <br>Firman Abdul Jabar</h1>
-        <p>Hello World! Right now, I'm tryna learn a bunch of a new technology on dicoding.com!</p>
-        <a href="https://dicoding.com" class="intro-cta" target="_blank">Go to Dicoding</a>
+    <form class="contact" action="mailto:firmanabduljabar@gmail.com" method="post" enctype="text/plain">
+      <div class="wrapper">
+        <h1>Mail Me</h1>
+        <p>Please fill in this form to mail me</p>
+        <hr><br>
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Your Name" name="name" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+
+        <label for="subject"><b>Subject</b></label>
+        <textarea type="text" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit"></input>   
       </div>
-      <div class="intro-right">
-        <img src="img/poster.svg" alt="poster" />
-      </div>
-    </div>
+    </form>
 
     <div class="bottom-left-gradient"></div>
-
     <div class="icon-bar">
       <a href="https://facebook.com/firmanabduljabar" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a> 
       <a href="https://twitter.com/firmanjabar" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a> 
@@ -68,40 +74,17 @@
       <a href="https://linkedin.com/in/firmanabduljabar" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
       <a href="https://instagram.com/firmanjabar" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a> 
     </div>
-  </section>
-
-  <section id="about">
-    <div class="wrapper">
-      <div class="about-left">
-        <img src="img/about.png" alt="about"/>
-      </div>
-      
-      <div class="about-right">
-        <h1>About Me</h1>
-        <p>I'm enthusiastic, reliable, responsible, polite and always willing to learn new skill and deep into that skills. I am able to work independently also within a team setting. My Motto is "All the impossible is possible for those who believe!". <br><br><br></p>
-      </div>
-    </div>
-
-    <div class="top-right-gradient"></div>
-  </section>
-
-  <!-- Page Banner -->
-  <div class="page-banner">
-    <h1>IVVIIXVII - Firman Abdul Jabar</h1>
-    <h3>Kecamatan Mande, Cianjur - Jawa Barat.</h3>
-    <a href="https://drive.google.com/file/d/1lDnr48NbXxURP_XGPt_y6c6h0Cz6Ezwv/view?usp=sharing" target="_blank">Download My CV</a>
   </div>
-
 </body>
 
-<!-- Footer -->
-<footer>
-  <div class="wrapper">
-    <div class="footer-center">
-      <p class="footer-name">Best Regards &copy; 2019 - IVVIIXVII</p>
+  <!-- Footer -->
+  <footer>
+    <div class="wrapper">
+      <div class="footer-center">
+        <p class="footer-name">Best Regards &copy; 2019 - IVVIIXVII</p>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 <script>
   function showMenu() {
