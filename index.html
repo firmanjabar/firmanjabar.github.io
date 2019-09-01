@@ -10,6 +10,7 @@
   <!--<link rel="manifest" href="/manifest.json"> -->
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="shortcut icon" type="image/png" href="/img/icon-512x512.png" />
   <!-- ios support -->
   <link rel="apple-touch-icon" href="/img/icon-96x96.png">
@@ -70,7 +71,7 @@
     </div>
   </section>
 
-  <section id="about">
+  <section id="about" data-aos="fade-left">
     <div class="wrapper">
       <div class="about-left">
         <img src="img/about.png" alt="about"/>
@@ -86,13 +87,11 @@
   </section>
 
   <!-- Page Banner -->
-  <div class="page-banner">
+  <div class="page-banner" data-aos="fade-right">
     <h1>IVVIIXVII - Firman Abdul Jabar</h1>
     <h3>Kecamatan Mande, Cianjur - Jawa Barat.</h3>
     <a href="https://drive.google.com/file/d/1lDnr48NbXxURP_XGPt_y6c6h0Cz6Ezwv/view?usp=sharing" target="_blank">Download My CV</a>
   </div>
-
-</body>
 
 <!-- Footer -->
 <footer>
@@ -103,7 +102,13 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
+  AOS.init({
+    offset: 120,
+    duration: 700,
+  });
+
   function showMenu() {
     // event.preventDefault();
 
@@ -116,4 +121,5 @@
     }
   }
 </script>
+</body>
 </html>
